@@ -25,3 +25,4 @@ capybara-*.html
 public/sitemap*
 .rvmrc
 *~
+.sass-cache
