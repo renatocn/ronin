@@ -21,6 +21,7 @@ gem "RedCloth", ">= 4.2.3"
 gem "acts-as-taggable-on", ">= 2.0.6"
 gem "aasm", :git => "git://github.com/rubyist/aasm.git"
 gem "metric_fu"
+gem "barista", ">=1.0.0"
 
 group :development do
   gem "faker"
