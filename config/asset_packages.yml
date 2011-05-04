@@ -1,6 +1,7 @@
 ---
 javascripts:
 - base:
+  - application
   - rails
   - highlight.pack
 - panel:
