@@ -38,6 +38,7 @@ group :test do
   gem "remarkable_activemodel", ">=4.0.0.alpha4"
   gem "remarkable_activerecord", ">=4.0.0.alpha4"
   gem "factory_girl_rails"
+  gem "evergreen", :require => "evergreen/rails"
 end
 
 group :cucumber do
