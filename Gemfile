@@ -27,6 +27,10 @@ group :development do
   gem "faker"
 end
 
+group :development, :test do
+  gem "evergreen", :require => "evergreen/rails"
+end
+
 group :production do
   gem "mysql", ">=2.8.1"
   gem 'newrelic_rpm', '>=2.13.0.beta5'
@@ -38,7 +42,7 @@ group :test do
   gem "remarkable_activemodel", ">=4.0.0.alpha4"
   gem "remarkable_activerecord", ">=4.0.0.alpha4"
   gem "factory_girl_rails"
-  gem "evergreen", :require => "evergreen/rails"
+  gem "capybara-envjs"
 end
 
 group :cucumber do
