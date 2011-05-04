@@ -35,104 +35,101 @@ body
   background: image-url("default/bg.png") repeat
   font-family: Arial, sans-serif
 
-  #container
-    @include container
+  ul#posts
+    margin: 0
+    padding: 0
 
-    ul#posts
-      margin: 0
-      padding: 0
+  li.post, div.post
+    @include border-radius(10px)
+    background: image-url("default/bg_post.png") repeat
+    margin-bottom: 20px
+    padding: 10px
 
-    li.post, div.post
-      @include border-radius(10px)
-      background: image-url("default/bg_post.png") repeat
-      margin-bottom: 20px
-      padding: 10px
+    h2
+      color: $title-color
+      font-style: italic
+      padding-bottom: 5px
+      border-bottom: 1px $border-color solid
 
-      h2
+      a
         color: $title-color
-        font-style: italic
-        padding-bottom: 5px
-        border-bottom: 1px $border-color solid
+        text-decoration: none
 
-        a
-          color: $title-color
-          text-decoration: none
+        &:hover
+          text-decoration: underline
 
-          &:hover
-            text-decoration: underline
+    .author
+      img
+        margin: 0 5px 0 0
+        float: left
 
-      .author
-        img
-          margin: 0 5px 0 0
-          float: left
-
-        p
-          font-size: 14px
-          line-height: 50px
-
-        time
-          span
-            line-height: 16px
-            padding-left: 20px
-
-            &.date
-              background: image-url("default/date.png") no-repeat left
-
-            &.time
-              background: image-url("default/time.png") no-repeat left
-
-      article
+      p
         font-size: 14px
+        line-height: 50px
 
-      .comments
-        margin: 0 0 10px 0
-        padding: 10px 0
-        border-top: 1px $border-color solid
-        border-bottom: 1px $border-color solid
-
-        h6
-          background: image-url("default/comments.png") no-repeat left
-          color: $title-color
-          font-size: 14px
+      time
+        span
           line-height: 16px
-          margin: 0 0 5px 0
-          padding: 0 0 0 20px
+          padding-left: 20px
 
-        a
-          color: $links-color
-          text-decoration: none
+          &.date
+            background: image-url("default/date.png") no-repeat left
 
-          &:hover
-            text-decoration: underline
+          &.time
+            background: image-url("default/time.png") no-repeat left
 
-      .tags
-        h6
-          background: image-url("default/tag_orange.png") no-repeat left
-          color: $title-color
-          font-size: 14px
-          line-height: 16px
-          margin: 0 0 5px 0
-          padding: 0 0 0 20px
+    article
+      font-size: 14px
 
-        ul
-          margin: 0
-          padding: 0
+    .comments
+      margin: 0 0 10px 0
+      padding: 10px 0
+      border-top: 1px $border-color solid
+      border-bottom: 1px $border-color solid
 
-          li
-            margin: 0 5px 0 0
-            display: inline
+      h6
+        background: image-url("default/comments.png") no-repeat left
+        color: $title-color
+        font-size: 14px
+        line-height: 16px
+        margin: 0 0 5px 0
+        padding: 0 0 0 20px
 
-            a
-              color: $links-color
-              text-decoration: none
+      a
+        color: $links-color
+        text-decoration: none
 
-              &:hover
-                text-decoration: underline
+        &:hover
+          text-decoration: underline
 
-  #container > header, #container > footer
+    .tags
+      h6
+        background: image-url("default/tag_orange.png") no-repeat left
+        color: $title-color
+        font-size: 14px
+        line-height: 16px
+        margin: 0 0 5px 0
+        padding: 0 0 0 20px
+
+      ul
+        margin: 0
+        padding: 0
+
+        li
+          margin: 0 5px 0 0
+          display: inline
+
+          a
+            color: $links-color
+            text-decoration: none
+
+            &:hover
+              text-decoration: underline
+
+  header, footer
     @include column($blueprint-grid-columns, true)
 
-  #container > aside
+  aside
     @include column($sidebar-columns, true)
 
     input[type=text]
@@ -142,7 +139,7 @@ body
       float: right
       margin-top: 4px
 
-  #container > section
+  section
     @include column($content-columns)
 
   ul, ol
