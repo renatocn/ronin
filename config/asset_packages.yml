@@ -1,9 +1,10 @@
 ---
 javascripts:
 - base:
-  - application
+  - jquery
   - rails
   - highlight.pack
+  - application
 - panel:
   - jquery.markitup.pack
   - markitup.set
