@@ -24,6 +24,11 @@ describe("with main template", function() {
       $(window).resize();
       expect($("section#content").width()).toEqual($(window).width() - $("aside").width() - 40);
     });
+
+    it("should update the aside height", function() {
+      $(window).resize();
+      expect($("aside").height()).toEqual(400);
+    });
   });
 
 });

@@ -1,7 +1,9 @@
 window.ronin = init: ->
   postsWidthDefiner()
-  $("aside").height($("ul#posts").height())
-  $(window).resize postsWidthDefiner
+  asideHeightDefiner()
+  $(window).resize ->
+    postsWidthDefiner()
+    asideHeightDefiner()
 
 $().ready ronin.init
 
@@ -11,3 +13,6 @@ window.postsWidthDefiner = ->
     aside = $("aside").width()
     margins = 40
     window_ - aside - margins
+
+window.asideHeightDefiner = ->
+  $("aside").height($("ul#posts").height())
