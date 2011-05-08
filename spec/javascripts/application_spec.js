@@ -19,4 +19,11 @@ describe("with main template", function() {
     });
   });
 
+  describe("when window is resized", function() {
+    it("should update the section#content width", function() {
+      $(window).resize();
+      expect($("section#content").width()).toEqual($(window).width() - $("aside").width() - 40);
+    });
+  });
+
 });

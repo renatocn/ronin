@@ -1,6 +1,7 @@
 window.ronin = init: ->
   postsWidthDefiner()
   $("aside").height($("ul#posts").height())
+  $(window).resize postsWidthDefiner
 
 $().ready ronin.init
 
