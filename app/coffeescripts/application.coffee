@@ -11,7 +11,7 @@ window.postsWidthDefiner = ->
   $("section#content").width ->
     window_ = $(window).width()
     aside = $("aside").width()
-    margins = 40
+    margins = 60
     window_ - aside - margins
 
 window.asideHeightDefiner = ->

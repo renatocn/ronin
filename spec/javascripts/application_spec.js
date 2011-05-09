@@ -10,8 +10,8 @@ describe("with main template", function() {
       ronin.init();
     });
 
-    it("should set the section#content width with (window width - aside width - 40px)", function() {
-      expect($("section#content").width()).toEqual($(window).width() - $("aside").width() - 40);
+    it("should set the section#content width with (window width - aside width - 60px)", function() {
+      expect($("section#content").width()).toEqual($(window).width() - $("aside").width() - 60);
     });
 
     it("should set aside height as the ul#posts height", function() {
@@ -22,7 +22,7 @@ describe("with main template", function() {
   describe("when window is resized", function() {
     it("should update the section#content width", function() {
       $(window).resize();
-      expect($("section#content").width()).toEqual($(window).width() - $("aside").width() - 40);
+      expect($("section#content").width()).toEqual($(window).width() - $("aside").width() - 60);
     });
 
     it("should update the aside height", function() {
