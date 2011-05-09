@@ -104,9 +104,11 @@ body
       padding: 0
 
     li.post, div.post
-      background: image-url("custom/bg_post.jpg") repeat
-      margin-bottom: 20px
+      margin: 10px 0 20px 0
       padding: 10px
+      background: image-url("custom/bg_post.png") repeat
+      border: solid 1px #d8d6ca
+      +box-shadow(#c6c5bc)
 
       h2
         color: $title-color
@@ -197,7 +199,6 @@ body
     height: 500px
     margin: 10px 10px 10px 0
     background: image-url("custom/bg_aside.png") repeat
-    +border-radius(5px)
 
     input[type=text]
       width: 150px
