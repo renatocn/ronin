@@ -190,11 +190,14 @@ body
                 text-decoration: underline
 
   aside
-    background: image-url("custom/bg_aside.jpg") repeat
-    width: 300px
-    height: 500px
-    float: right 
     position: relative
+    float: right 
+    border: dashed 1px #ccc7ba
+    width: 280px
+    height: 500px
+    margin: 10px 10px 10px 0
+    background: image-url("custom/bg_aside.png") repeat
+    +border-radius(5px)
 
     input[type=text]
       width: 150px
