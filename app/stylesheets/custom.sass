@@ -13,8 +13,7 @@
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
 // +blueprint
 
-@import "compass/css3/border-radius"
-@import "compass/css3/box-shadow"
+@import "compass/css3"
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 
@@ -51,16 +50,18 @@ body
     padding: 8px 20px
     background: image-url("custom/bg_header.png") repeat-x bottom
     color: white
+    font-family: Georgia, Arial, Verdana
 
     h1
       margin: 0
-      font-size: 46px
-      font-weight: bold
-      text-decoration: none
 
       a
-        color: #fff
+        font-size: 46px
+        font-weight: bold
         text-decoration: none
+        text-decoration: none
+        +text-shadow(#000, 2px, 2px, 2px)
+        color: #fff
 
         &:hover
           color: #efefef
@@ -69,6 +70,7 @@ body
       margin: 0
       font-size: 18px
       color: #efefef
+      +text-shadow(#000, 2px, 2px, 2px)
 
   section
     float: left
